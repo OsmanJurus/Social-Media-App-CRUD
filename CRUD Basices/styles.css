@@ -1,0 +1,185 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "roboto";
+  font-size: 15px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 50px;
+
+  background-color: #5b5858;
+  color: white;
+}
+
+label,
+button {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 10px 0;
+  color: orange;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: space-around;
+  gap: 50px;
+  box-shadow: 3px 2px 5px rgba(42, 40, 40, 0.5);
+  padding: 25px;
+}
+label {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 5px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.right {
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.left {
+  box-shadow: 3px 2px 5px rgba(53, 41, 41, 0.2);
+  padding: 10px;
+}
+#posts {
+  margin-top: 2vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+#input {
+  padding: 0.625rem 1.5625rem;
+  font-size: 1.3rem;
+  border: 0.125rem solid gray;
+  background-color: rgba(131, 127, 119, 0.323);
+  width: 25vw;
+  height: 35vh;
+}
+
+#input:focus {
+  border: 2px solid salmon;
+  background-color: #fff;
+  outline: none;
+}
+
+i,
+h3,
+p {
+  font-size: 1.5rem;
+  &.delete {
+    color: red;
+  }
+  &.edit {
+    color: green;
+  }
+}
+
+#posts div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.options {
+  display: flex;
+  gap: 25px;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 30px;
+  font-size: 16px;
+  background-color: #333;
+  color: gold;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: all ease-in-out 1s;
+  align-self: flex-start;
+  &:hover {
+    background-color: darkorange;
+    color: #333;
+    border: 2px solid salmon;
+  }
+}
+
+.error {
+  font-size: 15px;
+  color: red;
+  margin-bottom: 5px;
+}
+
+footer {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+/* *!Style rules for media queries! */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .left {
+    width: 80%;
+  }
+  #input {
+    width: 100%;
+  }
+  .right {
+    width: 80%;
+  }
+  h3 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  #posts {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  form {
+    gap: 2px;
+  }
+
+  button {
+    align-self: end;
+  }
+
+  body{
+    background-color: #fff;
+    color: #000;
+  }
+
+  footer{
+    padding: 10px;
+    margin: 10px 0;
+  }
+}

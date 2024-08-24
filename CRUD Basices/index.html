@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Basics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <h1>Social Media App</h1>
+    <div class="container">
+        <div class="left">
+            <form id="form">
+                <label for="input">Write your post here!</label>
+                <!-- <br><br> -->
+                <textarea name="input" id="input" cols="30" rows="10"></textarea>
+                <!-- <br><br> -->
+                <div class="error"></div>
+                <button class="btn" id="btn" type="submit">Post</button>
+            </form>
+        </div>
+
+        <div class="right">
+            <h3>Your post here</h3>
+            <div id="posts">
+                <div>
+                    <p>Post 1</p>
+                    <span class="options">
+                        <i onClick="editPost(this)" class="fa-solid fa-pen-to-square edit"></i>
+                        <i onClick="deletePost(this)" class="fa-solid fa-trash delete"></i>
+                    </span>
+                </div>
+
+                <div>
+                    <p>Post 2</p>
+                    <span class="options">
+                        <i onClick="editPost(this)" class="fa-solid fa-pen-to-square edit"></i>
+                        <i onClick="deletePost(this)" class="fa-solid fa-trash delete"></i>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>&copy; 2024. Ali rights reserved!</footer>
+</body>
+<script src="main.js"></script>
+
+</html>
